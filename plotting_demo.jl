@@ -1,6 +1,6 @@
 using Plots, Plots.Measures, LaTeXStrings
 
-default(fontfamily = "Computer Modern", dpi=300)
+default(fontfamily = "Computer Modern", dpi=600)
 
 x = range(0, 2π, length=1000)
 y = @. sin(x)
@@ -22,6 +22,7 @@ xticks!(a, (tick_range, tick_labels))
 yticks!(a, -1:1:1)
 xlabel!(a, L"x", guidefontsize=15)
 ylabel!(a, L"\sin(x)", guidefontsize=15)
+
 display(a)
 
 b=plot(x, z, 
@@ -30,13 +31,12 @@ b=plot(x, z,
     label=L"\sin^{-1}(y)", 
     margin=5mm, 
     legendfontsize=10,
-    tickfontsize = 10,
+    tickfontsize = 10
 )
 
 yticks!(b, ([-π/2:π/2:π/2;], [L"-\pi/2",L"0",L"\pi/2"]))
 xlabel!(b, L"y=\sin(x)", guidefontsize=15)
 ylabel!(b, L"\sin^{-1}(y)", guidefontsize=15)
-display(b)
 
 #png(a, "a")
 #png(b, "b")
