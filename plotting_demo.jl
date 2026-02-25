@@ -36,6 +36,7 @@ b=plot(x, z,
 yticks!(b, ([-π/2:π/2:π/2;], [L"-\pi/2",L"0",L"\pi/2"]))
 xlabel!(b, L"y=\sin(x)", guidefontsize=15)
 ylabel!(b, L"\sin^{-1}(y)", guidefontsize=15)
+display(b)
 
 #png(a, "a")
 #png(b, "b")
