@@ -1,3 +1,3 @@
-julialang plotting demo for dr. simon
+julialang demos for dr. simon
 
 brutally mogs python
